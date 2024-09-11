@@ -8,23 +8,23 @@ function Meni() {
       <div className="menu-bar">
         <div className="menu-bar-text">
           <img
-            src={"https://www.zeppelin.rs/login/media/images/categories/0-58254900-1666006933.png"}
+            src={"https://previews.123rf.com/images/sergeypykhonin/sergeypykhonin1809/sergeypykhonin180900041/108230283-registration-register-logo-or-label-diary-note-icon-vector-illustration.jpg"}
             alt="Opis slike"
-            style={{ width: "200px", height: "auto" }}
+            style={{ width: "100px", height: "auto" }}
           />
           <div className="menu-bar-items-div">
             <Link to="/products" className="menu-bar-items">
-              Prodavnica
+              Book Shop
             </Link>
           </div>
           <p>
-            Organizujte svoj dan, nedelju i godinu koristeći naše unikatne
-            planere. Upotpunite dozivljaj personalizacijom bilo kog planera koji
-            odaberete.
+          Explore our rich collection of books for every occasion.
+          Discover the perfect titles for relaxation, learning, or
+          inspiration, and enrich every moment with your favorite books.
           </p>
-          <p>Kontakt: 064/267 72 76</p>
-          <p>Radno vreme: Pon-Ned 07-22h</p>
-          <p>Adresa: Bulevar Kralja Aleksandra 10, Beograd</p>
+          <p>Contact: 064/267 72 76</p>
+          <p>Working hours: 07-22h</p>
+          <p>Address : Bulevar Kralja Aleksandra 10, Beograd</p>
         </div>
       </div>
     </div>

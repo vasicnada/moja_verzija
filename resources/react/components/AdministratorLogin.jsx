@@ -11,7 +11,7 @@ const AdministratorLogin = ({ addToken }) => {
 
   const [isLogin, setIsLogin] = useState(true);
 
-  
+
 
   function handleInput(e) {
         setIsLogin(true)
@@ -23,7 +23,7 @@ const AdministratorLogin = ({ addToken }) => {
 
   let navigate = useNavigate();
 
-  
+
   function handleLogin(e) {
     e.preventDefault();
     axios
@@ -63,12 +63,12 @@ const AdministratorLogin = ({ addToken }) => {
                   type="email"
                   id="form3Example3"
                   className="form-control form-control-lg"
-                  placeholder="Unesite Vašu email adresu"
+                  placeholder="Enter your email"
                   name="email"
                   onInput={(e) => handleInput(e)}
                 />
                 <label className="form-label" htmlFor="form3Example3">
-                  Email adresa
+                  Email address
                 </label>
               </div>
 
@@ -77,7 +77,7 @@ const AdministratorLogin = ({ addToken }) => {
                   type="password"
                   id="form3Example4"
                   className="form-control form-control-lg"
-                  placeholder="Unesite password"
+                  placeholder="Enter your password"
                   name="password"
                   onInput={handleInput}
                 />
@@ -86,7 +86,7 @@ const AdministratorLogin = ({ addToken }) => {
                   Password
                 </label>
                 <label style={{color: 'red', fontWeight: 'bold'}}>
-                {!isLogin && 'Korisničko ime ili password koji ste uneli je nepostojeći! Ukoliko nemate nalog morate se registrovati.'}
+                {!isLogin && "The username or password you entered does not exist! If you don't have an account, you must register."}
                 </label>
 
                 </div>

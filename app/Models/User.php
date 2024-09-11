@@ -43,7 +43,7 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    function planers(){
-        return $this->hasMany(Planer::class);
+    function books(){
+        return $this->hasMany(Book::class);
     }
 }

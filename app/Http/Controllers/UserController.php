@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\UserCollection;
-use App\Http\Resources\PlanerResource;
-use App\Models\Planer;
+use App\Http\Resources\BookResource;
+use App\Models\Book;
 use App\Models\User;
 use Illuminate\Http\Request;
 

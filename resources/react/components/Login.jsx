@@ -11,7 +11,7 @@ const Login = ({ addToken }) => {
 
   const [isLogin, setIsLogin] = useState(true);
 
-  
+
 
   function handleInput(e) {
         setIsLogin(true)
@@ -23,7 +23,7 @@ const Login = ({ addToken }) => {
 
   let navigate = useNavigate();
 
-  
+
   function handleLogin(e) {
     e.preventDefault();
     axios
@@ -60,7 +60,7 @@ const Login = ({ addToken }) => {
                   type="email"
                   id="form3Example3"
                   className="form-control form-control-lg"
-                  placeholder="Unesite Vašu email adresu"
+                  placeholder="Enter your email address"
                   name="email"
                   onInput={(e) => handleInput(e)}
                 />
@@ -74,7 +74,7 @@ const Login = ({ addToken }) => {
                   type="password"
                   id="form3Example4"
                   className="form-control form-control-lg"
-                  placeholder="Unesite password"
+                  placeholder="Enter password"
                   name="password"
                   onInput={handleInput}
                 />
@@ -83,7 +83,7 @@ const Login = ({ addToken }) => {
                   Password
                 </label>
                 <label style={{color: 'red', fontWeight: 'bold'}}>
-                {!isLogin && 'Korisničko ime ili password koji ste uneli je nepostojeći! Ukoliko nemate nalog morate se registrovati.'}
+                {!isLogin && "The username or password you entered does not exist! If you don't have an account, you must register."}
                 </label>
 
                 </div>
@@ -102,9 +102,9 @@ const Login = ({ addToken }) => {
                   Login
                 </button>
                 <p className="small fw-bold mt-2 pt-1 mb-0">
-                  Nemas nalog?{" "}
+                    Don't have an account?{" "}
                   <a href="/register" className="link-danger">
-                    Registruj se
+                    Register
                   </a>
                 </p>
               </div>

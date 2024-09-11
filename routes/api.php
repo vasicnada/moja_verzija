@@ -1,13 +1,13 @@
 <?php
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\PlanerController;
+use App\Http\Controllers\BookController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Planer;
+use App\Models\Book;
 use App\Models\User;
 use App\Models\Category;
 use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
@@ -28,7 +28,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('users',UserController::class);
-Route::resource('planers',PlanerController::class);
+Route::resource('books',BookController::class);
 Route::get('/categories',[CategoryController::class,'index']);
 Route::get('/categories/{id}',[CategoryController::class,'show']);
 
@@ -39,11 +39,11 @@ Route::group(['middleware'=>'auth:sanctum'], function(){
     Route::get('/profile', function(Request $request){
         return auth()->user();
     });
-    Route::resource('planers', PlanerController::class)->only(['update', 'store', 'destroy']);
+    Route::resource('books', BookController::class)->only(['update', 'store', 'destroy']);
     Route::post('/logout',[AuthController::class,'logout']);
 });
 
-Route::resource('planers',PlanerController::class)->only(['index']);
+Route::resource('books',BookController::class)->only(['index']);
 
 
 
